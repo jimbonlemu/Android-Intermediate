@@ -14,7 +14,6 @@ import androidx.core.content.res.ResourcesCompat
 import com.jimbonlemu.mycustomview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
 
     private val mBitmap = Bitmap.createBitmap(1000, 1000, Bitmap.Config.ARGB_8888)
     private val mCanvas = Canvas(mBitmap)
@@ -32,32 +31,31 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        ActivityMainBinding.inflate(layoutInflater).apply {
+            setContentView(root)
+            imageView.setImageBitmap(mBitmap)
+            showText()
 
-        binding.imageView.setImageBitmap(mBitmap)
-        showText()
+            like.setOnClickListener {
+                showEars()
+                showFace()
+                showMouth(true)
+                showEyes()
+                showNose()
+                showHair()
+                imageView.invalidate()
+            }
 
-        binding.like.setOnClickListener {
-            showEars()
-            showFace()
-            showMouth(true)
-            showEyes()
-            showNose()
-            showHair()
-            binding.imageView.invalidate()
+            dislike.setOnClickListener {
+                showEars()
+                showFace()
+                showMouth(false)
+                showEyes()
+                showNose()
+                showHair()
+                imageView.invalidate()
+            }
         }
-
-        binding.dislike.setOnClickListener {
-            showEars()
-            showFace()
-            showMouth(false)
-            showEyes()
-            showNose()
-            showHair()
-            binding.imageView.invalidate()
-        }
-
     }
 
     private fun showFace() {
