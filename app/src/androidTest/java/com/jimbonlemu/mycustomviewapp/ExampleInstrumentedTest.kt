@@ -1,4 +1,4 @@
-package com.jimbonlemu.mycustomview
+package com.jimbonlemu.mycustomviewapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

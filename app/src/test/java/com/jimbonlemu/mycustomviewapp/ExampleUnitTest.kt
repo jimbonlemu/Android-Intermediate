@@ -1,4 +1,4 @@
-package com.jimbonlemu.mycustomview
+package com.jimbonlemu.mycustomviewapp
 
 import org.junit.Test
 
