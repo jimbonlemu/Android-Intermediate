@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.jimbonlemu.mycustomview"
+    namespace = "com.jimbonlemu.project_name"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jimbonlemu.mycustomview"
+        applicationId = "com.jimbonlemu.project_name"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MyCustomView"
+rootProject.name = "project_name"
 include(":app")

@@ -1,8 +1,8 @@
-package com.jimbonlemu.mycustomview
+package com.jimbonlemu.project_name
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.jimbonlemu.mycustomview.databinding.ActivityMainBinding
+import com.jimbonlemu.project_name.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
